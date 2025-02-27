@@ -14,7 +14,6 @@ export const Contact = () => {
   const onSubmit = async (messageData) => {
     try {
       await axios.post("https://getform.io/f/bvrwydob", messageData);
-      console.log("Message sent successfully");
       toast.success("Your message has been sent successfully!");
     } catch (error) {
       toast.error("Something went wrong. Please try again.");
