@@ -38,7 +38,7 @@ export const Home = () => {
                 <span key={index}>{para}</span>
               ))}
             </p>
-            <div className="flex flex-col md:flex-row justify-between space-y-6 items-center">
+            <div className="flex flex-col md:flex-row justify-between space-y-6">
               {/* Social Media Icons */}
               <div className="space-y-3">
                 <h1 className="font-bold text-center md:text-left">
@@ -92,7 +92,7 @@ export const Home = () => {
                 <h1 className="font-bold text-center md:text-left">
                   Currently working on
                 </h1>
-                <ul className="flex space-x-5">
+                <ul className="flex justify-around md:space-x-5">
                   <li>
                     <SiReact className="text-xl md:text-3xl cursor-pointer hover:scale-110 duration-200" />
                   </li>

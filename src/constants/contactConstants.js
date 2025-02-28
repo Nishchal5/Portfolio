@@ -14,6 +14,13 @@ export const FORM_FIELDS = [
     type: "email",
   },
   {
+    id: "contact_number",
+    label: "Contact Number",
+    name: "Contact Number",
+    placeholder: "Enter Your Contact Number",
+    type: "tel",
+  },
+  {
     id: "message",
     label: "Message",
     name: "Message",

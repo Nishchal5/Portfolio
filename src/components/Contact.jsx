@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 export const Contact = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm();
@@ -14,9 +15,12 @@ export const Contact = () => {
   const onSubmit = async (messageData) => {
     try {
       await axios.post("https://getform.io/f/bvrwydob", messageData);
-      toast.success("Your message has been sent successfully!");
+      toast.success(
+        `Hi ${messageData.Name}, Your message has been sent successfully!`
+      );
+      reset();
     } catch (error) {
-      toast.error("Something went wrong. Please try again.");
+      toast.error(`Something went wrong. Please try again.`);
       console.log(error);
     }
   };
@@ -56,23 +60,29 @@ export const Contact = () => {
       <h1 className="text-3xl font-bold mb-5"> Contact Me</h1>
       <span>Please fill out the form below to contact me</span>
       <div className="flex justify-center items-center mt-10">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          // action="https://getform.io/f/apjnpyea"
-          // method="POST"
-          className="bg-slate-200 p-10 rounded-lg w-100"
-        >
+        <form className="bg-slate-200 p-10 rounded-lg w-100">
           <h1 className="text-xl font-semibold mb-5">Send Your Message</h1>
-          {/* Form Method */}
-
           {/* invisible field to trick spambots */}
           <input type="hidden" name="_gotcha" />
           {/* invisible field to trick spambots */}
 
           {FORM_FIELDS.map((field) => formFields(field))}
-          <button className="bg-black text-white px-3 py-2 rounded-lg hover:bg-slate-700 duration-300 cursor-pointer">
-            Send
-          </button>
+          <div className="flex space-x-10 mt-5">
+            <button
+              type="button"
+              onClick={handleSubmit(onSubmit)}
+              className="bg-black text-white px-3 py-2 rounded-lg hover:bg-slate-700 duration-300 cursor-pointer"
+            >
+              Send
+            </button>
+            <button
+              type="button"
+              onClick={() => reset()}
+              className="bg-black text-white px-3 py-2 rounded-lg hover:bg-slate-700 duration-300 cursor-pointer"
+            >
+              Clear
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -1,5 +1,13 @@
+import moment from "moment";
+
+const currentDate = moment();
+const tcsJoiningDate = moment("2019-07-26");
+
+var year = currentDate.diff(tcsJoiningDate, "year"); // 1
+var months = currentDate.diff(tcsJoiningDate, "month") - year * 12; 
+
 export const ABOUT_ME = [
-  ` I am a Front-End Developer with over 5.5 years of experience.
+  ` I am a Front-End Developer with ${year} years and ${months} months of experience.
     Throughout my career, I’ve honed my skills in crafting dynamic,
     user-friendly web interfaces that provide an exceptional user
     experience. My expertise spans across various front-end
