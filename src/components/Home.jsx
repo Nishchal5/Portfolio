@@ -38,7 +38,7 @@ export const Home = () => {
                 <span key={index}>{para}</span>
               ))}
             </p>
-            <div className="flex flex-col md:flex-row justify-between space-y-6">
+            <div className="flex flex-col md:flex-row justify-between space-y-6 items-center">
               {/* Social Media Icons */}
               <div className="space-y-3">
                 <h1 className="font-bold text-center md:text-left">
