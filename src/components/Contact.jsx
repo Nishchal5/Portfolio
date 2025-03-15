@@ -60,7 +60,7 @@ export const Contact = () => {
       <h1 className="text-3xl font-bold mb-5"> Contact Me</h1>
       <span>Please fill out the form below to contact me</span>
       <div className="flex justify-center items-center mt-10">
-        <form className="bg-slate-200 p-10 rounded-lg w-100">
+        <form className="bg-slate-200 p-10 rounded-lg w-100" netlify>
           <h1 className="text-xl font-semibold mb-5">Send Your Message</h1>
           {/* invisible field to trick spambots */}
           <input type="hidden" name="_gotcha" />
