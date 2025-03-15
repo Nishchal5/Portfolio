@@ -9,7 +9,7 @@ import {
 } from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import { ABOUT_ME } from "../constants";
-import image from "../assets/pic.png";
+import image from "../assets/Pic.png";
 import { SOCIAL_MEDIA_LINKS } from "../constants";
 
 export const Home = () => {
