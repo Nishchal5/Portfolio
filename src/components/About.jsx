@@ -4,22 +4,40 @@ import {
   EDUCATION_AND_TRAINING,
   MISSION_STATEMENT,
   PROFESSION_EXPERIENCE,
+  RESUME,
   SKILLS_AND_EXPERTISE,
 } from "../constants/aboutConstants";
+import NishchalResume from "../assets/Nishchal_Verma_CV React.pdf";
 
 export const About = () => {
-  const aboutDetails = ({ heading, list }) => (
+  const aboutDetails = (aboutData, downloadResume = false) => (
     <>
       <div name="aboutDetail">
         <br />
-        <h1 className="text-green-600 font-semibold text-xl">{heading}</h1>
+        <h1 className="text-green-600 font-semibold text-xl">
+          {aboutData.heading}
+        </h1>
         <ul>
-          {list.map((item,idx) => (
+          {aboutData.list.map((item, idx) => (
             <li className="text-justify" key={idx}>
               {item}
             </li>
           ))}
         </ul>
+        {downloadResume && (
+          <a
+            href={NishchalResume}
+            className="my-2"
+            download="Download Resume"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <br />
+            <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+              Download Resume
+            </button>
+          </a>
+        )}
       </div>
     </>
   );
@@ -41,9 +59,12 @@ export const About = () => {
         </p>
         <div name="Education">{aboutDetails(EDUCATION_AND_TRAINING)}</div>
         <div name="Skills">{aboutDetails(SKILLS_AND_EXPERTISE)}</div>
-        <div name="Professional Experience">{aboutDetails(PROFESSION_EXPERIENCE)}</div>
+        <div name="Professional Experience">
+          {aboutDetails(PROFESSION_EXPERIENCE)}
+        </div>
         <div name="Certification">{aboutDetails(ACHIEVEMENTS_AND_AWARDS)}</div>
-        <div name="Certification">{aboutDetails(MISSION_STATEMENT)}</div>
+        <div name="MissonStatement">{aboutDetails(MISSION_STATEMENT)}</div>
+        <div name="Resume">{aboutDetails(RESUME, true)}</div>
       </div>
     </>
   );

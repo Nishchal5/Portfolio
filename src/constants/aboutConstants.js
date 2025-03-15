@@ -41,3 +41,10 @@ export const MISSION_STATEMENT = {
     " My mission is to leverage my skills and creativity to deliver innovative front-end solutions that exceed client expectations and contribute positively to the digital landscape. I am committed to continuous learning and growth, always seeking new challenges and opportunities to expand my horizons.",
   ],
 };
+
+export const RESUME = {
+  heading: "Resume",
+  list: [
+    "As a React Developer, I bring a strong foundation in building dynamic, user-friendly web applications. To learn more about my technical expertise, project experience, and professional journey, feel free to download my resume below. Let's create something amazing together!",
+  ],
+};

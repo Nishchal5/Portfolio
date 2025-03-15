@@ -9,7 +9,7 @@ import {
 } from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import { ABOUT_ME } from "../constants";
-import image from "../assets/photo.avif";
+import image from "../assets/pic.png";
 import { SOCIAL_MEDIA_LINKS } from "../constants";
 
 export const Home = () => {
@@ -114,7 +114,7 @@ export const Home = () => {
             <img
               src={image}
               alt="Developer's Pic"
-              className="rounded-full md:w-[450px]"
+              className="rounded-full md:w-[550px] "
             />
           </div>
         </div>

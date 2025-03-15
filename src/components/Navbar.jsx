@@ -2,7 +2,7 @@ import * as React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link } from "react-scroll";
-import logo from "../assets/photo.avif";
+import logo from "../assets/Pic.png";
 import { NAV_ITEMS } from "../constants";
 
 export const Navbar = () => {
