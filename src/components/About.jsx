@@ -28,7 +28,7 @@ export const About = () => {
           <a
             href={NishchalResume}
             className="my-2"
-            download="Download Resume"
+            download="Nishchal_CV_React_Developer"
             target="_blank"
             rel="noreferrer"
           >
